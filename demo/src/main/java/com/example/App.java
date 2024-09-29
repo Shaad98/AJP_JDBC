@@ -15,6 +15,7 @@ public class App
         String password = "Shaad#98";
         System.out.println( "Hello World!" );
         try{
+            Class.forName("org.postgresql.Driver");
             Connection connection = DriverManager.getConnection(url, username, password);
             System.out.println("Connection is Successful!");
             connection.close();
